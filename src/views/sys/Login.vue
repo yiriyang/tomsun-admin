@@ -47,6 +47,7 @@
 <script lang="ts" setup>
 import router from "@/router";
 import { reactive } from "vue";
+import { useStore } from "@/stores/modules/user"
 
 interface FormState {
   username: string;
@@ -61,7 +62,9 @@ const formState = reactive<FormState>({
 const onFinish = (values: any) => {
   console.log("Success:", values);
 
-  
+  useStore().login(formState).then(resp => {
+    console.log(resp)
+  })
 
   router.push("/");
 };
