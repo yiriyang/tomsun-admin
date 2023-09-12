@@ -1,3 +1,1 @@
-<template>
-  权限中心
-</template>
+<template>权限中心</template>

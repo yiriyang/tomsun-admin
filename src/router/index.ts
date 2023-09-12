@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 import Layout from '../layout/Layout.vue'
 
-export const constantRoutes:RouteRecordRaw[] = [
+export const constantRoutes: RouteRecordRaw[] = [
   {
     path: '/login',
     name: 'login',
@@ -25,7 +25,7 @@ export const constantRoutes:RouteRecordRaw[] = [
         name: '控制台',
         component: () => import('../views/dashboard/Information.vue'),
         meta: {
-          title: '控制台详情',
+          title: '控制台详情'
         }
       }
     ]
@@ -42,7 +42,7 @@ export const constantRoutes:RouteRecordRaw[] = [
         component: () => import('../views/pages/PageOne.vue'),
         meta: {
           title: '页面一'
-        },
+        }
       }
     ]
   },
@@ -89,6 +89,5 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: constantRoutes
 })
-
 
 export default router

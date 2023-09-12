@@ -1,3 +1,1 @@
-<template>
-  设置菜单
-</template>
+<template>设置菜单</template>

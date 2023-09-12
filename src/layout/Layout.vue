@@ -15,10 +15,7 @@
 <script lang="ts" setup>
 import Sidebar from './sidebar/Sidebar.vue'
 import Breadcrumb from '@/components/Breadcrumb.vue'
-import NavigationBar from './header/NavigationBar.vue';
-
+import NavigationBar from './header/NavigationBar.vue'
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

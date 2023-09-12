@@ -1,3 +1,1 @@
-<template>
-  Logo
-</template>
+<template>Logo</template>

@@ -9,24 +9,29 @@ import { defineStore } from 'pinia'
 // }
 
 export const useStore = defineStore('user', () => {
-    const token = ref(getToken() || '')
-    console.log(token)
+  const token = ref(getToken() || '')
+  console.log(token)
 
-    // 登录
-    const login = async ({username, password}:{username: string, password: string}):Promise<Object> => {
-        console.log(username, password)
-        const result = { username: 'admin', password: '123456', token: 'xxxxx' }
+  // 登录
+  const login = async ({
+    username,
+    password
+  }: {
+    username: string
+    password: string
+  }): Promise<Object> => {
+    console.log(username, password)
+    const result = { username: 'admin', password: '123456', token: 'xxxxx' }
 
-        setToken(result.token)
-        const res = await { code: 200, data: true, msg: '登录成功' }
-        return res
-    }
+    setToken(result.token)
+    const res = await { code: 200, data: true, msg: '登录成功' }
+    return res
+  }
 
-    // 登出
-    const loginout = () => {
-        removeToken()
-    }
+  // 登出
+  const loginout = () => {
+    removeToken()
+  }
 
-
-    return { login, loginout }
+  return { login, loginout }
 })

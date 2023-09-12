@@ -1,3 +1,1 @@
-<template>
-  菜单中心
-</template>
+<template>菜单中心</template>

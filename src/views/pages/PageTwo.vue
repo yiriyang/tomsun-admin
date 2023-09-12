@@ -1,3 +1,1 @@
-<template>
-  页面二
-</template>
+<template>页面二</template>

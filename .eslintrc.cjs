@@ -3,31 +3,38 @@ require('@rushstack/eslint-patch/modern-module-resolution')
 
 module.exports = {
   root: true,
-  'extends': [
+  extends: [
     'plugin:vue/vue3-recommended',
     'eslint:recommended',
-    '@vue/eslint-config-typescript'
+    '@vue/eslint-config-typescript',
   ],
   parserOptions: {
     ecmaVersion: 'latest'
   },
   rules: {
-    "vue/max-attributes-per-line": [
-      "error",
+    'vue/first-attribute-linebreak': [
+      'error',
+      {
+        singleline: 'beside',
+        multiline: 'below'
+      }
+    ],
+    'vue/max-attributes-per-line': [
+      'error',
       {
         singleline: {
-          max: 1,
+          max: 2
         },
         multiline: {
-          max: 1,
-        },
-      },
+          max: 1
+        }
+      }
     ],
-    "vue/multi-word-component-names": [
-      "off",
+    'vue/multi-word-component-names': [
+      'off',
       {
-        ignores: [],
-      },
-    ],
+        ignores: []
+      }
+    ]
   }
 }

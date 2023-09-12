@@ -25,53 +25,45 @@
       <a-input-password v-model:value="formState.password" />
     </a-form-item>
 
-    <a-form-item
-      name="remember"
-      :wrapper-col="{ offset: 4, span: 20 }"
-    >
-      <a-checkbox v-model:checked="formState.remember">
-        记住账号
-      </a-checkbox>
+    <a-form-item name="remember" :wrapper-col="{ offset: 4, span: 20 }">
+      <a-checkbox v-model:checked="formState.remember"> 记住账号 </a-checkbox>
     </a-form-item>
 
     <a-form-item :wrapper-col="{ offset: 4, span: 20 }">
-      <a-button
-        type="primary"
-        html-type="submit"
-      >
-        登录
-      </a-button>
+      <a-button type="primary" html-type="submit"> 登录 </a-button>
     </a-form-item>
   </a-form>
 </template>
 <script lang="ts" setup>
-import router from "@/router";
-import { reactive } from "vue";
-import { useStore } from "@/stores/modules/user"
+import router from '@/router'
+import { reactive } from 'vue'
+import { useStore } from '@/stores/modules/user'
 
 interface FormState {
-  username: string;
-  password: string;
-  remember: boolean;
+  username: string
+  password: string
+  remember: boolean
 }
 const formState = reactive<FormState>({
-  username: "",
-  password: "",
-  remember: true,
-});
+  username: '',
+  password: '',
+  remember: true
+})
 const onFinish = (values: any) => {
-  console.log("Success:", values);
+  console.log('Success:', values)
 
-  useStore().login(formState).then(resp => {
-    console.log(resp)
-  })
+  useStore()
+    .login(formState)
+    .then((resp) => {
+      console.log(resp)
+    })
 
-  router.push("/");
-};
+  router.push('/')
+}
 
 const onFinishFailed = (errorInfo: any) => {
-  console.log("Failed:", errorInfo);
-};
+  console.log('Failed:', errorInfo)
+}
 </script>
 
 <style>
