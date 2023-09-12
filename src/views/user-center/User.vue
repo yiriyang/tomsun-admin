@@ -3,14 +3,23 @@
     <template #bodyCell="{ column }">
       <template v-if="column.key === 'active'">
         <a-space wrap>
-          <a-button type="primary" @click="onEdit"> 编辑 </a-button>
-          <a-button type="primary" danger> 删除 </a-button>
+          <a-button type="primary" @click="onEdit">
+            编辑
+          </a-button>
+          <a-button type="primary" danger>
+            删除
+          </a-button>
         </a-space>
       </template>
     </template>
   </a-table>
 
-  <a-modal v-model:visible="visible" title="Title" :confirm-loading="confirmLoading" @ok="handleOk">
+  <a-modal
+    v-model:visible="visible"
+    title="Title"
+    :confirm-loading="confirmLoading"
+    @ok="handleOk"
+  >
     <p>{{ modalText }}</p>
   </a-modal>
 </template>

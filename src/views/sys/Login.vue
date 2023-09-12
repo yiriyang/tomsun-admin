@@ -26,11 +26,15 @@
     </a-form-item>
 
     <a-form-item name="remember" :wrapper-col="{ offset: 4, span: 20 }">
-      <a-checkbox v-model:checked="formState.remember"> 记住账号 </a-checkbox>
+      <a-checkbox v-model:checked="formState.remember">
+        记住账号
+      </a-checkbox>
     </a-form-item>
 
     <a-form-item :wrapper-col="{ offset: 4, span: 20 }">
-      <a-button type="primary" html-type="submit"> 登录 </a-button>
+      <a-button type="primary" html-type="submit">
+        登录
+      </a-button>
     </a-form-item>
   </a-form>
 </template>
