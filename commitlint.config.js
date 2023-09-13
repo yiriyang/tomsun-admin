@@ -4,10 +4,23 @@ require('@rushstack/eslint-patch/modern-module-resolution')
 module.exports = {
   extends: '@commitlint/config-conventional',
   rules: {
-    feat: 'error',
-    'scope-empty': 'warn',
-    'footer-patterns': ['[BREAKING]']
+    'body-leading-blank': [2, 'always'],
+    'footer-leading-blank': [1, 'always'],
+    'header-max-length': [2, 'always', 108],
+    'subject-empty': [2, 'never'],
+    'type-empty': [2, 'never'],
+    'subject-case': [0],
+    'type-enum': [
+      2,
+      'always',
+      [
+        'feat',
+        'fix',
+        'chore',
+        'style',
+        'test',
+        'docs'
+      ]
+    ]
   }
 }
-
-// export commit
