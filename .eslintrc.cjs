@@ -7,33 +7,17 @@ module.exports = {
     'plugin:vue/vue3-recommended',
     'eslint:recommended',
     '@vue/eslint-config-typescript',
+    '@vue/prettier'
   ],
   parserOptions: {
     ecmaVersion: 'latest'
   },
   rules: {
-    'vue/first-attribute-linebreak': [
+    'vue/multi-word-component-names': 'off',
+    'prettier/prettier': [
       'error',
       {
-        singleline: 'beside',
-        multiline: 'below'
-      }
-    ],
-    'vue/max-attributes-per-line': [
-      'error',
-      {
-        singleline: {
-          max: 2
-        },
-        multiline: {
-          max: 1
-        }
-      }
-    ],
-    'vue/multi-word-component-names': [
-      'off',
-      {
-        ignores: []
+        endOfLine: 'auto'
       }
     ]
   }

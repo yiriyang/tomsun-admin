@@ -1,6 +1,4 @@
 /* eslint-env node */
-require('@rushstack/eslint-patch/modern-module-resolution')
-
 module.exports = {
   extends: '@commitlint/config-conventional',
   rules: {
@@ -10,17 +8,6 @@ module.exports = {
     'subject-empty': [2, 'never'],
     'type-empty': [2, 'never'],
     'subject-case': [0],
-    'type-enum': [
-      2,
-      'always',
-      [
-        'feat',
-        'fix',
-        'chore',
-        'style',
-        'test',
-        'docs'
-      ]
-    ]
+    'type-enum': [2, 'always', ['feat', 'fix', 'chore', 'style', 'test', 'docs']]
   }
 }

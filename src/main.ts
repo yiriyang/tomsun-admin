@@ -5,6 +5,7 @@ import store from '@/stores'
 
 import App from './App.vue'
 import router from './router'
+
 import '@/router/permission'
 
 import Antd from 'ant-design-vue'

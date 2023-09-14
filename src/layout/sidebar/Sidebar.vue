@@ -1,9 +1,5 @@
 <template>
-  <a-layout-sider
-    v-model:collapsed="state.collapsed"
-    collapsible
-    @collapse="onCollapse"
-  >
+  <a-layout-sider v-model:collapsed="state.collapsed" collapsible @collapse="onCollapse">
     <div class="logo">
       <Logo />
     </div>
