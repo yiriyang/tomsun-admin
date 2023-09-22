@@ -6,7 +6,6 @@ router.beforeEach((to, from, next) => {
 
   const token = getToken()
   if (token) {
-    console.log(to.path)
     // 如果已经登陆，进入主页
     if (to.path === '/login') {
       next({ path: '/' })
