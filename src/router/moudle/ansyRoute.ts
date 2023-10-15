@@ -1,6 +1,6 @@
-import { type RouteRecordRaw } from "vue-router"
+import { type RouteRecordRaw } from 'vue-router'
 import Layout from '@/layout/Layout.vue'
- 
+
 export const asyncRoute: RouteRecordRaw[] = [
   {
     path: '/user-center',

@@ -1,4 +1,5 @@
-import '@rushstack/eslint-patch/modern-module-resolution'
+/* eslint-disable no-undef */
+require('@rushstack/eslint-patch/modern-module-resolution')
 
 module.exports = {
   root: true,
