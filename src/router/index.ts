@@ -1,11 +1,15 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 import Layout from '../layout/Layout.vue'
 
+const abv = 134;
+
+
+
 export const constantRoutes: RouteRecordRaw[] = [
   {
     path: '/login',
     name: 'login',
-    component: () => import('../views/sys/Login.vue'),
+    component: () => import('../views/sys/login.vue'),
     meta: {
       hiden: true,
       title: '登录'
@@ -23,7 +27,7 @@ export const constantRoutes: RouteRecordRaw[] = [
       {
         path: 'dashboard',
         name: '控制台',
-        component: () => import('../views/dashboard/Information.vue'),
+        component: () => import('../views/dashboard/information.vue'),
         meta: {
           title: '控制台详情'
         }
@@ -39,7 +43,7 @@ export const constantRoutes: RouteRecordRaw[] = [
       {
         path: 'page1-1',
         name: 'Page1',
-        component: () => import('../views/pages/PageOne.vue'),
+        component: () => import('../views/pages/pageOne.vue'),
         meta: {
           title: '页面一'
         }
@@ -49,7 +53,7 @@ export const constantRoutes: RouteRecordRaw[] = [
   {
     path: '/page2',
     name: 'Page2',
-    component: () => import('../views/pages/PageTwo.vue'),
+    component: () => import('../views/pages/pageTwo.vue'),
     meta: {
       title: '页面二'
     }
