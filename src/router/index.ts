@@ -1,9 +1,7 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 import Layout from '../layout/Layout.vue'
 
-const abv = 134;
-
-
+// const abv = 134;
 
 export const constantRoutes: RouteRecordRaw[] = [
   {
