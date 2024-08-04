@@ -2,12 +2,11 @@
     "printWidth": 160,
     "tabWidth": 4,
     "useTabs": false,
-    "singleQuote": false,
+    "singleQuote": true,
     "semi": false,
     "trailingComma": "none",
     "arrowParens": "avoid",
     "bracketSpacing": true,
     "singleAttributePerLine": false,
     "endOfLine": "auto"
-  }
-  
+}

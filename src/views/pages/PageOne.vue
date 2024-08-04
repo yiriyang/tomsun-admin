@@ -1,3 +1,3 @@
 <template>
-  <div>页面一</div>
+    <div>页面一</div>
 </template>

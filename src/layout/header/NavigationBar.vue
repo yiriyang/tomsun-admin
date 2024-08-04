@@ -1,9 +1,9 @@
 <template>
-  <a-layout-header class="header" />
+    <a-layout-header class="header" />
 </template>
 
 <style lang="scss" scoped>
 .header {
-  background-color: #ccc;
+    background-color: #ccc;
 }
 </style>
