@@ -8,15 +8,15 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, watch, h } from "vue"
-import { PieChartOutlined } from "@ant-design/icons-vue"
-import Logo from "./Logo.vue"
-import { constantRoutes } from "@/router/index"
-import type { VNode } from "vue"
-import type { MenuProps } from "ant-design-vue"
-import { useRouter } from "vue-router"
-import type { MenuInfo } from "ant-design-vue/es/menu/src/interface"
-import type { Key } from "ant-design-vue/es/_util/type"
+import { reactive, watch, h } from 'vue'
+import { PieChartOutlined } from '@ant-design/icons-vue'
+import Logo from './Logo.vue'
+import { constantRoutes } from '@/router/index'
+import type { VNode } from 'vue'
+import type { MenuProps } from 'ant-design-vue'
+import { useRouter } from 'vue-router'
+import type { MenuInfo } from 'ant-design-vue/es/menu/src/interface'
+import type { Key } from 'ant-design-vue/es/_util/type'
 const router = useRouter()
 
 interface sideItem {
@@ -58,14 +58,14 @@ const menuList = getRoutes(constantRoutes)
 
 const state = reactive({
     collapsed: false,
-    selectedKeys: ["1"],
-    openKeys: ["sub1"],
-    preOpenKeys: ["sub1"]
+    selectedKeys: ['1'],
+    openKeys: ['sub1'],
+    preOpenKeys: ['sub1']
 })
 
-const handleClick: MenuProps["onClick"] = (menu: MenuInfo) => {
+const handleClick: MenuProps['onClick'] = (menu: MenuInfo) => {
     const keyPath: Key[] = menu.keyPath || []
-    let globalPath = keyPath.join("/").replace("//", "/")
+    let globalPath = keyPath.join('/').replace('//', '/')
     // 跳转对应路由页面
     router.push({
         path: globalPath

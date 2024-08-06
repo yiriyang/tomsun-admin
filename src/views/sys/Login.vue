@@ -27,9 +27,9 @@
     </a-form>
 </template>
 <script lang="ts" setup>
-import router from "@/router"
-import { reactive } from "vue"
-import { useStore } from "@/stores/modules/user"
+import router from '@/router'
+import { reactive } from 'vue'
+import { useStore } from '@/stores/modules/user'
 
 interface FormState {
     username: string
@@ -37,12 +37,12 @@ interface FormState {
     remember: boolean
 }
 const formState = reactive<FormState>({
-    username: "",
-    password: "",
+    username: '',
+    password: '',
     remember: true
 })
 const onFinish = (values: any) => {
-    console.log("Success:", values)
+    console.log('Success:', values)
 
     useStore()
         .login(formState)
@@ -50,11 +50,11 @@ const onFinish = (values: any) => {
             console.log(resp)
         })
 
-    router.push("/")
+    router.push('/')
 }
 
 const onFinishFailed = (errorInfo: any) => {
-    console.log("Failed:", errorInfo)
+    console.log('Failed:', errorInfo)
 }
 </script>
 

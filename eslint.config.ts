@@ -5,15 +5,15 @@ import pluginVue from "eslint-plugin-vue";
 
 export default [
   {
-    files: ["**/*.{js,mjs,cjs,ts}"]
+    ignorePatterns: ["dist", "node_modules", "*.config.[js,ts]"],
   },
   {
     languageOptions: {
       globals: {
         ...globals.browser,
-        ...globals.node
-      }
-    }
+        ...globals.node,
+      },
+    },
   },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
@@ -22,12 +22,11 @@ export default [
     files: ["**/*.vue"],
     languageOptions: {
       parserOptions: {
-        parser: tseslint.parser
-      }
+        parser: tseslint.parser,
+      },
     },
     rules: {
-      'vue/multi-word-component-names': 'off',
-    }
-
-  }
+      "vue/multi-word-component-names": "off",
+    },
+  },
 ];
