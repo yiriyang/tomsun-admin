@@ -14,6 +14,8 @@ export default defineConfig({
     },
   },
   server: {
-    hmr: false,
+    host: "0.0.0.0",
+    port: 7019,
+    open: true,
   },
 });
