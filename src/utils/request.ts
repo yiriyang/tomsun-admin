@@ -1,16 +1,16 @@
 import axios from 'axios'
 
 const createService = () => {
-    const service = axios.create()
+  const service = axios.create()
 
-    service.interceptors.request.use(config => config)
+  service.interceptors.request.use(config => config)
 
-    service.interceptors.response.use(response => {
-        console.log(response)
-        return response
-    })
+  service.interceptors.response.use(response => {
+    console.log(response)
+    return response
+  })
 
-    return service
+  return service
 }
 
 export const request = createService()
