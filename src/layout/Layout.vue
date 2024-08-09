@@ -1,18 +1,19 @@
 <template>
-  <a-layout style="min-height: 100vh">
+  <Layout style="min-height: 100vh">
     <Sidebar />
-    <a-layout class="container">
+    <Layout>
       <NavigationBar />
-      <a-layout-content>
+      <LayoutContent>
         <Breadcrumb />
-        <div class="scroll-wrap">
+        <div>
           <RouterView />
         </div>
-      </a-layout-content>
-    </a-layout>
-  </a-layout>
+      </LayoutContent>
+    </Layout>
+  </Layout>
 </template>
 <script lang="ts" setup>
+import { Layout, LayoutContent } from 'ant-design-vue'
 import Sidebar from './sidebar/Sidebar.vue'
 import Breadcrumb from '@/components/Breadcrumb.vue'
 import NavigationBar from './header/NavigationBar.vue'

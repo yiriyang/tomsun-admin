@@ -1,5 +1,5 @@
 <template>
-  <a-form
+  <Form
     class="form-wrap"
     :model="formState"
     name="basic"
@@ -9,24 +9,25 @@
     @finish="onFinish"
     @finish-failed="onFinishFailed"
   >
-    <a-form-item label="用户名" name="username" :rules="[{ required: true, message: 'Please input your username!' }]">
-      <a-input v-model:value="formState.username" />
-    </a-form-item>
+    <FormItem label="用户名" name="username" :rules="[{ required: true, message: '请输入用户名!' }]">
+      <Input v-model:value="formState.username" />
+    </FormItem>
 
-    <a-form-item label="密码" name="password" :rules="[{ required: true, message: 'Please input your password!' }]">
-      <a-input-password v-model:value="formState.password" />
-    </a-form-item>
+    <FormItem label="密码" name="password" :rules="[{ required: true, message: '请输入密码!' }]">
+      <InputPassword v-model:value="formState.password" />
+    </FormItem>
 
-    <a-form-item name="remember" :wrapper-col="{ offset: 4, span: 20 }">
-      <a-checkbox v-model:checked="formState.remember"> 记住账号 </a-checkbox>
-    </a-form-item>
+    <FormItem name="remember" :wrapper-col="{ offset: 4, span: 20 }">
+      <Checkbox v-model:checked="formState.remember"> 记住账号 </Checkbox>
+    </FormItem>
 
-    <a-form-item :wrapper-col="{ offset: 4, span: 20 }">
-      <a-button type="primary" html-type="submit"> 登录 </a-button>
-    </a-form-item>
-  </a-form>
+    <FormItem :wrapper-col="{ offset: 4, span: 20 }">
+      <Button type="primary" html-type="submit"> 登录 </Button>
+    </FormItem>
+  </Form>
 </template>
 <script lang="ts" setup>
+import { Form, FormItem, Input, InputPassword, Button, Checkbox } from 'ant-design-vue'
 import router from '@/router'
 import { reactive } from 'vue'
 import { useStore } from '@/stores/modules/user'
